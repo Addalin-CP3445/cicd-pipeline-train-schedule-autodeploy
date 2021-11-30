@@ -1,0 +1,5 @@
+- hosts: all
+  become: no
+  tasks: 
+    - name: deploy 
+      command: kubectl create -f /var/lib/jenkins/workspace/job5-deploy-to-production/train-schedule-kube.yml
