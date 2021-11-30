@@ -1,0 +1,5 @@
+- hosts: all
+  become: no
+  tasks: 
+    - name: deploy canary
+      command: kubectl create -f /var/lib/jenkins/workspace/job4-canary-deployment/train-schedule-kube-canary.yml
